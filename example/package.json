@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "publish": "rm -rf dist && webpack --mode=production && rm -rf ../docs  && mkdir ../docs && cp -r dist ../docs/dist && cp ./index.html ../docs/index.html && cp ./example.sqlite3 ../docs/example.sqlite3",
+    "build": "rm -rf dist && webpack --mode=development",
+    "start": "http-server -p 8080"
+  },
   "dependencies": {
     "sql.js-httpvfs": "^0.8.8"
   },
